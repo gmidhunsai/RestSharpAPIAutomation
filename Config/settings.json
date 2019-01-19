@@ -1,0 +1,4 @@
+{
+    "ENDPOINT": "http://qapznsvc01.rb.local",
+    "POST_LOGIN_PHONE_PATH": "/Personalization/v1/profiles/loginphone"
+}
