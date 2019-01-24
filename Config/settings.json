@@ -1,4 +1,46 @@
 {
-    "ENDPOINT": "http://qapznsvc01.rb.local",
-    "POST_LOGIN_PHONE_PATH": "/Personalization/v1/profiles/loginphone"
+	"Environment": {
+		"QA": {
+			"Endpoint": "http://qapznsvc01.rb.local/Personalization",
+			"UserEmail": "purnasai.redbox@gmail.com",
+			"UserPassword": "Redbox1!",
+			"UserPhone": "9876543211",
+			"UserPin": "1234",
+			"System":"QAPZNSVC01",
+			"Username":"PersonalizationRestSharpAutomation"
+		},
+		"Staging": {
+			"Endpoint": "",
+			"UserEmail": "",
+			"UserPassword": "",
+			"UserPhone": "",
+			"UserPin": ""
+		}
+	},
+	"Resources": {
+		"Profiles": {
+			"LoginPhone": "/v1/profiles/loginphone",
+			"LoginEmail": "/v1/profiles/loginemail",
+			"ResetPin": "/v1/profiles/resetpin",
+			"ResendText": "/v1/profiles/resendtext",
+			"GetCustomerProfile": "/v1/profiles/{customerProfileNumber}",
+			"GetCustomerOptins": "/v1/profiles/getoptins",
+			"EditOptins": "/v1/profiles/editoptins",
+			"EnrollInPerks": "/v1/profiles/enrollperks",
+			"Create": "/v1/profiles/create"
+		},
+		"Marketing": {
+			"GetOffers": "/v2/marketing/getoffers",
+			"PostGetAcceptedOffers": "/v1/marketing/acceptedOffers",
+			"GetAcceptedOffers": "/v1/marketing/acceptedOffers",
+			"PostPromoCodes": "/v1/marketing/promocodes",
+			"BriteVerifyEmail": "/v1/marketing/emails/verify",
+			"GetOfferImages": "/v1/marketing/offers/files/{fileId}"
+		},
+		"Transaction": {
+			"Accrual": "/v1/transactions/estaccrual",
+			"Redemption": "/v1/transactions/redemption",
+			"TransactionHistory": "/v1/transactions"
+		}
+	}
 }

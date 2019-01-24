@@ -4,6 +4,7 @@ using RestSharp;
 using Utils;
 using Models;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace Library
 {
@@ -12,13 +13,29 @@ namespace Library
         public IRestResponse postLoginPhone(LoginPhoneRequest loginPhoneRequest)
         {
             // Endpoint setting from configuration
-            var restClient = new RestClient(ConfigurationReader.Get("ENDPOINT"));
+            var restClient = new RestClient(ConfigurationReader.Get("Environment:QA:Endpoint"));
             // Resource path setting from configuration
-            var request = new RestRequest(ConfigurationReader.Get("POST_LOGIN_PHONE_PATH"), Method.POST);
+            var request = new RestRequest(ConfigurationReader.Get("Resources:Profiles:LoginPhone"), Method.POST);
             
             // Request format JSON/ XML
             request.RequestFormat = DataFormat.Json;
             request.AddJsonBody(loginPhoneRequest);
+            
+            // EXECUTE REQUEST
+            IRestResponse response = executeRequest(restClient, request);
+            return response;
+        }
+
+        public IRestResponse postLoginEmail(LoginEmailRequest loginEmailRequest)
+        {
+            // Endpoint setting from configuration
+            var restClient = new RestClient(ConfigurationReader.Get("Environment:QA:Endpoint"));
+            // Resource path setting from configuration
+            var request = new RestRequest(ConfigurationReader.Get("Resources:Profiles:LoginEmail"), Method.POST);
+            
+            // Request format JSON/ XML
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(loginEmailRequest);
             
             // EXECUTE REQUEST
             IRestResponse response = executeRequest(restClient, request);

@@ -1,0 +1,75 @@
+{
+    "Price": {
+        "Dvd": 1.5,
+        "Blueray": 2.0,
+        "Game": 3.0,
+        "4K UHD": 3.0,
+        "OndemandRental": 4.99,
+        "OndemandPurchase": 15.99,
+        "DigitalCode": 4.99
+    },
+    "Format": {
+        "Dvd": 1,
+        "Blueray": 2,
+        "DigitalCode": 17,
+        "4K UHD": 19,
+        "OnDemandRental": 13,
+        "OndemandPurchase": 15,
+        "Game": {
+            "PS4": 11,
+            "Xbox 360": 3,
+            "Xbox One": 12,
+            "Nintendo Switch": 18
+        }
+    },
+    "Titles": {
+        "Dvd": {
+            "titleId1": "8817",
+            "titleId2": "7348",
+            "titleId3": "7489"
+        },
+        "Blueray": {
+            "titleId1": "8030",
+            "titleId2": "7146",
+            "titleId3": "8818"
+        },
+        "DigitalCode": {
+            "titleId1": "800057",
+            "titleId2": "800105",
+            "titleId3": "800120"
+        },
+        "4K UHD": {
+            "titleId1": "902081",
+            "titleId2": "900125",
+            "titleId3": "900160"
+        },
+        "OnDemandRental": {
+            "titleId1": "10010",
+            "titleId2": "10011",
+            "titleId3": "10012"
+        },
+        "OndemandPurchase": {
+            "titleId1": "10010",
+            "titleId2": "10011",
+            "titleId3": "10012"
+        },
+        "Games": {
+            "PS4": {
+                "titleId1": "10412",
+                "titleId2": "10390"
+            },
+            "Xbox 360": {
+                "titleId1": "7779",
+                "titleId2": "7325"
+            },
+            "Xbox One": {
+                "titleId1": "10413",
+                "titleId2": "10391"
+            },
+            "Nintendo Switch": {
+                "titleId1": "10476",
+                "titleId2": "10478"
+            }
+        }
+    }
+}
